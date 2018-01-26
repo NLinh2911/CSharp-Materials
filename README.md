@@ -65,35 +65,51 @@
 6. Cho 1 tập hợp học sinh và điểm, tìm các học sinh có điểm thấp hơn điểm trung bình sử dụng let trong linq
 
 ### Buổi 6: 
-* Chủ đề: enum, struct, nullable, class,object, thread
+* Chủ đề: enum, struct, nullable, class, object
 #### Bài tập:
 1. Viết chương trình lưu các ngày trong tuần bằng enum và nhận 1 số người dùng nhập vào và in ra ngày tương ứng.
 2. Tạo Book Class, giả lập 1 CSDL dạng List<Book> lưu nhiều sách, dùng linq tạo chức năng tìm kiếm sách theo tiêu đề, lọc theo tác giả, lọc theo chủ đề, năm,...
-3. Ping pong game
-
 
 ### Buổi 7:
 * Chủ đề: oop: abstraction, encapsulation & inheritance, object initialiser
 #### Bài tập:
-1. Tạo 1 class Circle dựa theo class diagram
-2. Tạo 1 base class Person, các lớp con Student, Teacher,... kế thừa từ nó
-3. Tạo 1 class với các thuộc tính và phương thức thể hiện tính đóng gói qua các access modifiers khác nhau
-4. Tạo và sử dụng static Calculator class
-5. Nâng cao class Person với nhiều constructor, lớp con sử dụng lại base contructors
+1. Tạo 1 chương trình quản lý ô tô: dựng 1 class Car có các thuộc tính phù hợp (Color, Year, Brand, Mileage,...). Trong class Car cần khởi tạo các constructors khác nhau nhận tham số đầu vào khi khởi tạo đối tượng khác nhau. Ngoài ra, tạo biến và phương thức static để có thể kiểm tra số lượng đối tượng ô tô được tạo ra. Ví dụ sau khi có class Car, trong hàm Main ta có thể gọi các câu lệnh dưới đây và in ra kết quả đúng.
+```cs
+        static void Main(string[] args)
+        {
+            // Instantiating an object of Car() Class by using Type Inference called Car1
+            var Car1 = new Car();
+            // Using dot notation to call members on Car1
+            Car1.Color = "White";
+            Car1.Year = 2010;
+            Car1.Mileage = 11000;
+
+            var Car2 = new Car("Red", 2008);
+
+            // Access static members
+            int carCount = Car.CountCars();
+
+            // Output to the console window
+            Console.WriteLine($"There are {carCount} cars on inventory right now.");
+        }
+```
+2. Tạo 1 base class Person, các lớp con Student, Teacher,... kế thừa từ nó. Lớp Person có 1 số đặc tính chung, còn mỗi lớp con sẽ có 1 số thuộc tính hay phương thức riêng biệt của nó. 
+3. Tạo và sử dụng static Calculator class có các phương thức Add, Substract, Multiply, Divide,...
+4. Nâng cao class Person với nhiều constructor, lớp con sử dụng lại base contructors, gợi ý từ khóa  `public Student () : base () {...}`
 
 ### Buổi 8:
 * Chủ đề: oop - polymorphism, interface
 #### Bài tập:
-1. Static polymorphism hay method overloading: nâng cấp static class Calculator
-2. Dynamic polymorphism hay method overriding: sử dụng abstract hay virtual method ở lớp cha và lớp con override - tạo base class là Shape và lớp con Circle, Rectangle,...có phương thức getArea, getPerimeter,...
+1. Static polymorphism hay method overloading: nâng cấp static class Calculator với nhiều phiên bản của các phương thức trong nó. Ví dụ, Add(3, 3) nhận 2 số dạng int còn Add(10.05, 11.33) nhận 2 số double,...
+2. Dynamic polymorphism hay method overriding: sử dụng abstract hay virtual method ở lớp cha và lớp con override - tạo base class là Shape và lớp con Circle, Rectangle,...có phương thức getArea, getPerimeter,...Mỗi lớp có thuộc tính phù hợp và cách thực thi phương thức getArea, getPerimeter khác nhau.
 3. Tạo nhiều class và kế thừa từ interface chung theo class diagram smartphone
-4. Bank Account Manager: Account base class với derived classes: SavingAccount, CheckingAccount, InvestmentAccount.
-5. Product Inventory: tạo ưng dụng quản lý sản phẩm, lớp Product gồm thông tin tên, số lượng, giá,...; lớp Inventory quản lý sản phẩm, thay đổi sản phẩm, thể hiện giá trị thông tin sản phẩm,....
+4. Product Inventory: tạo ưng dụng quản lý sản phẩm, lớp Product gồm thông tin tên, số lượng, giá,... phương thức như tăng giảm số lượng của sản phẩm, tăng giảm giá,... ; lớp Inventory quản lý nhiều sản phẩm, thay đổi sản phẩm, thể hiện giá trị thông tin sản phẩm,....Khi khởi tạo lớp Product ta tạo 1 loại sản phẩm, ví dụ, apple. Nhưng khi khởi tạo 1 Inventory, nó có thể chứa nhiều loại sản phẩm, ví dụ `inventory1.Items = new List<Product>(){apple, banana, watermelon};`. Tự nghĩ phần xử lý logic của các phương thức hợp lý. Ví dụ, AddProduct() thêm sản phẩm vào trong 1 inventory.
+5. Bank Account Manager: Account base class với derived classes: SavingAccount, CheckingAccount, InvestmentAccount.
 
 ### Buổi 9:
 * Chủ đề: unit testing
 #### Bài tập:
-1. Quadratic function: giải phương trình bậc hai và unit test hàm này
+1. Quadratic function: giải phương trình bậc hai và viết unit test hàm này
 2. Viết unit test cho ứng dụng Bank Account Manager và Product Inventory 
 
 ### Buổi 10:
