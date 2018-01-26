@@ -68,7 +68,8 @@
 * Chủ đề: enum, struct, nullable, class, object
 #### Bài tập:
 1. Viết chương trình lưu các ngày trong tuần bằng enum và nhận 1 số người dùng nhập vào và in ra ngày tương ứng.
-2. Tạo Book Class, giả lập 1 CSDL dạng List<Book> lưu nhiều sách, dùng linq tạo chức năng tìm kiếm sách theo tiêu đề, lọc theo tác giả, lọc theo chủ đề, năm,...
+2. Tạo Book Class có các thuộc tính như bookID, title, author, year,...giả lập ta có CSDL BookStore trong đó có 1 List<Book> lưu nhiều sách, dùng linq tạo chức năng tìm kiếm sách theo tiêu đề, lọc theo tác giả, lọc theo chủ đề, năm,...  
+Ví dụ đặt tên CSDL là class BookStore trong đó có 1 List lưu nhiều sách, class này có phương thức FindByTitle, FindByAuthor, FindByYear, FindByID,....Người dùng chỉ có quyền truy vấn dữ liệu qua các phương thức public chứ không được trực tiếp trỏ vào hay thay đổi dữ liệu List<Book> trong BookStore.
 
 ### Buổi 7:
 * Chủ đề: oop: abstraction, encapsulation & inheritance, object initialiser
