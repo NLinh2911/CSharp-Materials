@@ -167,7 +167,6 @@ D. 2.3
 ```cs
 List<int> ints = new List<int> { 1, 2, 4, 8, 4, 2, 1 };
 List<int> filter = new List<int> { 1, 1, 2, 3, 5, 8 };
-// Will contain { 1, 2, 8 }
 IEnumerable<int> result = ints.Intersect(filter);
 ```
 A. 1 2 8  
