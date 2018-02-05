@@ -1,4 +1,4 @@
-# Codecamp 2 của lớp C# 
+# Codecamp 3 của lớp C# 
 
 Yêu cầu làm tất cả phần quiz và thực hành, gửi link github bài làm.  
 ## Quiz:
